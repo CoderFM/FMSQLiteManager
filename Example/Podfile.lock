@@ -1,0 +1,25 @@
+PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - FMSQLiteManager (0.1.0):
+    - FMDB
+
+DEPENDENCIES:
+  - FMSQLiteManager (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+
+EXTERNAL SOURCES:
+  FMSQLiteManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  FMSQLiteManager: b6c1343de30ba9a5fef62e71f1dbac1b04da01c7
+
+PODFILE CHECKSUM: 33df9c461db46f8685281880f4e7a66b9f76282e
+
+COCOAPODS: 1.11.3

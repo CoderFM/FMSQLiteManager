@@ -1,0 +1,6 @@
+framework module Pods_FMSQLiteManager_Example {
+  umbrella header "Pods-FMSQLiteManager_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
