@@ -21,7 +21,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		81CAD5F7292DFD0500EC9B72 /* SWTikTokAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CAD5F5292DFD0500EC9B72 /* SWTikTokAccountModel.m */; };
+		81CAD5F7292DFD0500EC9B72 /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CAD5F5292DFD0500EC9B72 /* AccountModel.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		ADC605B6D46C35058C342ABE /* Pods_FMSQLiteManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2320C3C04D4B4C7CA90EE371 /* Pods_FMSQLiteManager_Example.framework */; };
 		DB9F76C4CF57819DFFED7326 /* Pods_FMSQLiteManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E409A2C88E84A6770A3B51 /* Pods_FMSQLiteManager_Tests.framework */; };
@@ -61,8 +61,8 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		81CAD5F5292DFD0500EC9B72 /* SWTikTokAccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTikTokAccountModel.m; sourceTree = "<group>"; };
-		81CAD5F6292DFD0500EC9B72 /* SWTikTokAccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTikTokAccountModel.h; sourceTree = "<group>"; };
+		81CAD5F5292DFD0500EC9B72 /* AccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountModel.m; sourceTree = "<group>"; };
+		81CAD5F6292DFD0500EC9B72 /* AccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountModel.h; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		884AE78B93A1D2851DBD6931 /* Pods-FMSQLiteManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMSQLiteManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-FMSQLiteManager_Example/Pods-FMSQLiteManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9750CF564FD9101618F96B49 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* FMViewController.h */,
 				6003F5A6195388D20070C39A /* FMViewController.m */,
-				81CAD5F6292DFD0500EC9B72 /* SWTikTokAccountModel.h */,
-				81CAD5F5292DFD0500EC9B72 /* SWTikTokAccountModel.m */,
+				81CAD5F6292DFD0500EC9B72 /* AccountModel.h */,
+				81CAD5F5292DFD0500EC9B72 /* AccountModel.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -374,7 +374,7 @@
 				6003F59E195388D20070C39A /* FMAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* FMViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				81CAD5F7292DFD0500EC9B72 /* SWTikTokAccountModel.m in Sources */,
+				81CAD5F7292DFD0500EC9B72 /* AccountModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

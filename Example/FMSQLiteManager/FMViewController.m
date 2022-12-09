@@ -8,14 +8,14 @@
 
 #import "FMViewController.h"
 #import "FMSQLiteManager.h"
-#import "SWTikTokAccountModel.h"
+#import "AccountModel.h"
 
 #define DB_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES)  lastObject]
 
 @interface FMViewController ()
 
 @property(nonatomic, strong)FMSQLiteManager *sqliteManager;
-@property(nonatomic, strong)SWTikTokAccountModel *model;
+@property(nonatomic, strong)AccountModel *model;
 
 @end
 
@@ -44,7 +44,7 @@
 - (void)customMethod{
     NSLog(@"customMethod");
     long long userID = (long long)[NSDate date].timeIntervalSince1970;
-    SWTikTokAccountModel *model = [[SWTikTokAccountModel alloc] init];
+    AccountModel *model = [[AccountModel alloc] init];
     model.addDate = [NSDate date];
     model.userID = userID;
     model.customID = @"";

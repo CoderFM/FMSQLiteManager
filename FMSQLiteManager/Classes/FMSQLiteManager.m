@@ -62,22 +62,6 @@
     return [self executeSQL:sql];
 }
 
-- (BOOL)executeSQL:(NSString *)sql{
-    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    __block BOOL success;
-    [self.databaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
-        success = [db executeUpdate:sql];
-        if (success) {
-            printf("成功\n");
-        } else {
-            printf("失败\n");
-        }
-        dispatch_semaphore_signal(sema);
-    }];
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-    return success;
-}
-
 - (void)loadAllObjectsFrom:(Class<FMSQLiteModelProtocol>)class0 orderBy:(NSString * _Nullable)orderBy complete:(void(^)(NSArray<FMSQLiteModelProtocol> *models))complete{
     NSString *sql = [NSString stringWithFormat:@"SELECT * FROM %@%@;", [class0 tableName], orderBy ? [NSString stringWithFormat:@" ORDER BY %@", orderBy] : @""];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
@@ -112,14 +96,25 @@
     !compelete ?:compelete(success, model);
 }
 
-- (void)clearTableFrom:(Class<FMSQLiteModelProtocol>)class0{
+- (BOOL)clearTableFrom:(Class<FMSQLiteModelProtocol>)class0{
     NSString *sql = [NSString stringWithFormat:@"DELETE FROM %@;", [class0 tableName]];
+    return [self executeSQL:sql];
+}
+
+- (BOOL)executeSQL:(NSString *)sql{
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    [self.databaseQueue inTransaction:^(FMDatabase * _Nonnull db, BOOL * _Nonnull rollback) {
-        [db executeUpdate:sql];
+    __block BOOL success;
+    [self.databaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        success = [db executeUpdate:sql];
+        if (success) {
+            printf("成功\n");
+        } else {
+            printf("失败\n");
+        }
         dispatch_semaphore_signal(sema);
     }];
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    return success;
 }
 
 @end

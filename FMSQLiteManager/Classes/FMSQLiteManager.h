@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)createTableIfNotExistFrom:(Class<FMSQLiteModelProtocol>)class0;
 
+- (BOOL)executeSQL:(NSString *)sql;
+
 - (BOOL)saveObject:(id<FMSQLiteModelProtocol>)model;
 
 - (BOOL)saveOrUpdateObject:(id<FMSQLiteModelProtocol>)model;
@@ -29,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)loadAllObjectsFrom:(Class<FMSQLiteModelProtocol>)class0 orderBy:(NSString * _Nullable)orderBy complete:(void(^)(NSArray<FMSQLiteModelProtocol> *models))complete;
 
-- (void)clearTableFrom:(Class<FMSQLiteModelProtocol>)class0;
+- (BOOL)clearTableFrom:(Class<FMSQLiteModelProtocol>)class0;
 
 @end
 

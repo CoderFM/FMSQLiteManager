@@ -1,5 +1,5 @@
 //
-//  SWTikTokAccountModel.h
+//  AccountModel.h
 //  SWTikTokDylib
 //
 //  Created by iOS on 2022/11/14.
@@ -9,7 +9,7 @@
 #import "FMSQLiteBaseModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SWTikTokAccountModel : FMSQLiteBaseModel
+@interface AccountModel : FMSQLiteBaseModel
 
 @property long long userID;
 @property NSString *customID;

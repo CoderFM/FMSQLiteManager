@@ -1,11 +1,11 @@
 //
-//  SWTikTokAccountModel.m
+//  AccountModel.m
 //  SWTikTokDylib
 //
 //  Created by iOS on 2022/11/14.
 //
 
-#import "SWTikTokAccountModel.h"
+#import "AccountModel.h"
 #import <FMDB.h>
 
 NSDateFormatter *AccountDateFormatter(void){
@@ -19,7 +19,7 @@ NSDateFormatter *AccountDateFormatter(void){
     return formatter;
 }
 
-@implementation SWTikTokAccountModel
+@implementation AccountModel
 
 + (NSString *)primaryKey{
     return @"userID";
